@@ -1,0 +1,18 @@
+basic:
+  network: "LeNet"
+  dataset: "MNIST"
+  log_path: './log/LeNet/MNIST'
+  output_path: './output/LeNet/MNIST/'
+  # dump_path: './output/LeNet/MNIST/LeNet_MNIST/epoch010.pth'
+  use_device: 0
+train:
+  end_epoch: 20
+  batch_size: 128
+  limit_batch_num: -1
+optim:
+  damp_coef: 0.001
+  CG_quit_coef: 0.0001
+  taylor_threshold: 0.05
+  verbose: True
+  CG_log_interval: 1
+  CG_maxiter: 50

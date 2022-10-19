@@ -1,0 +1,17 @@
+basic:
+  network: "LeNet"
+  dataset: "MNIST"
+  log_path: './log/LeNet/MNIST'
+  output_path: './output/LeNet/MNIST/'
+  use_device: 0
+train:
+  end_epoch: 20            # total epochs to run
+  batch_size: 256
+  limit_batch_num: 40      # if set -1, use full dataset; else train on batch_size * limit_batch_num data samples.
+optim:
+  damp_coef: 0.001
+  CG_quit_coef: 0.0001
+  taylor_threshold: 0.05  # the taylor ratio threshold.
+  verbose: False
+  CG_log_interval: 1
+  CG_maxiter: 50          # total CG iterations, set to 50 for training NNs. Or 1000 for training SVMs and LR.
